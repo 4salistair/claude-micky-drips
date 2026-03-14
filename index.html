@@ -19,24 +19,24 @@
   }
   body { background: var(--bg); color: var(--text); font-family: Arial, sans-serif; min-height: 100vh; }
   .app { max-width: 480px; margin: 0 auto; padding: 24px 16px 100px; }
-
+ 
   .header { border-bottom: 2px solid var(--text); padding-bottom: 16px; margin-bottom: 24px; }
   .header-top { display: flex; justify-content: space-between; align-items: center; }
   .logo { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
-  .logo span { color: var(--green); }
+  .logo span { color: var(--text); }
   .badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase; }
   .badge-open { background: var(--green-light); color: var(--green); }
   .badge-locked { background: #fef2f2; color: var(--red); }
   .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
-
+ 
   .section-label { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
-
+ 
   .player-select { margin-bottom: 24px; }
   .player-chips { display: flex; gap: 8px; flex-wrap: wrap; }
   .chip { padding: 7px 16px; border-radius: 4px; border: 1.5px solid var(--border); background: var(--bg); font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.1s; color: var(--muted); font-family: Arial, sans-serif; }
   .chip:hover { border-color: var(--text); color: var(--text); }
   .chip.active { background: var(--text); border-color: var(--text); color: #fff; }
-
+ 
   .picks-overview { margin-bottom: 24px; }
   .picks-table { width: 100%; border: 1.5px solid var(--border); border-radius: 6px; overflow: hidden; }
   .picks-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 13px; }
@@ -45,42 +45,42 @@
   .pname { color: var(--muted); font-weight: 500; }
   .pteam { font-weight: 700; color: var(--text); }
   .not-picked { color: #d1d5db; font-style: italic; font-weight: 400; }
-
+ 
   .fixtures-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
   .ko-badge { font-size: 11px; font-weight: 700; color: var(--muted); background: var(--surface); border: 1px solid var(--border); padding: 3px 10px; border-radius: 4px; }
-
+ 
   .fixture { border: 1.5px solid var(--border); border-radius: 6px; margin-bottom: 8px; overflow: hidden; cursor: pointer; transition: border-color 0.1s; background: var(--bg); }
   .fixture:hover { border-color: #9ca3af; }
   .fixture.selected { border-color: var(--green); background: var(--green-light); }
   .fixture.locked-picks { opacity: 0.55; pointer-events: none; }
-
+ 
   .fixture-inner { display: grid; grid-template-columns: 1fr 36px 1fr; align-items: center; padding: 14px 14px 10px; gap: 6px; }
   .team { display: flex; flex-direction: column; }
   .team.away { text-align: right; align-items: flex-end; }
   .team-name { font-size: 14px; font-weight: 700; line-height: 1.2; }
   .team-league { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .vs { text-align: center; font-size: 11px; font-weight: 700; color: var(--muted); }
-
+ 
   .pick-indicators { display: flex; justify-content: space-between; padding: 0 14px 10px; min-height: 20px; }
   .pick-tags-left, .pick-tags-right { display: flex; gap: 4px; }
   .pick-tag { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; }
   .tag-you { background: var(--green); color: #fff; }
   .tag-other { background: var(--border); color: var(--muted); }
-
+ 
   .your-pick-banner { background: var(--green); padding: 5px 14px; font-size: 11px; color: #fff; font-weight: 700; letter-spacing: 0.5px; }
-
+ 
   .submitted-state { border: 1.5px solid var(--green); border-radius: 6px; padding: 20px; margin-bottom: 16px; background: var(--green-light); text-align: center; }
   .submitted-big { font-size: 22px; font-weight: 700; color: var(--green); }
   .submitted-detail { font-size: 13px; color: var(--muted); margin-top: 4px; }
   .change-btn { margin-top: 12px; background: none; border: 1.5px solid var(--border); color: var(--muted); padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: Arial, sans-serif; }
   .change-btn:hover { border-color: var(--text); color: var(--text); }
-
+ 
   .summary { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; padding: 12px 16px 20px; background: #fff; border-top: 1px solid var(--border); }
   .submit-btn { width: 100%; padding: 14px; background: var(--text); color: #fff; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; border: none; border-radius: 6px; cursor: pointer; transition: opacity 0.1s; text-transform: uppercase; }
   .submit-btn:disabled { opacity: 0.25; cursor: not-allowed; }
   .submit-btn:not(:disabled):hover { opacity: 0.85; }
   .submit-btn.ready { background: var(--green); }
-
+ 
   .no-player { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px; }
   .loading { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 13px; }
 </style>
@@ -94,28 +94,28 @@
     </div>
     <div class="sub" id="date-sub">Saturday 3pm kick-offs</div>
   </div>
-
+ 
   <div class="player-select">
     <div class="section-label">Who are you?</div>
     <div class="player-chips" id="player-chips"></div>
   </div>
-
+ 
   <div id="picks-overview"></div>
   <div id="main-content"><div class="loading">Loading fixtures...</div></div>
 </div>
-
+ 
 <div class="summary">
   <button class="submit-btn" id="submit-btn" disabled>Select your name first</button>
 </div>
-
+ 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const SUPABASE_URL = 'https://nefwvjlpxeertiousboc.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5lZnd2amxweGVlcnRpb3VzYm9jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0ODU5OTcsImV4cCI6MjA4OTA2MTk5N30.-4Uw5MJIc0BvSvCACuhZ2QE3g36q-dxbGWNrot1sT8c';
 const FOOTBALL_KEY = '8cdddde18526453c81d91b08647eaa06';
-const PLAYERS = ['Alistair', 'Dave', 'Steve', 'Chris', 'Mark'];
+const PLAYERS = ['Alistair', 'Mat', 'Si', 'Oli', 'Andrew'];
 // ─────────────────────────────────────────────────────────────────────────────
-
+ 
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 let currentPlayer = null;
 let fixtures = [];
@@ -124,19 +124,19 @@ let myPick = null;
 let pendingPick = null;
 let isLocked = false;
 const weekDate = getSaturdayDate();
-
+ 
 function getSaturdayDate() {
   const d = new Date();
   const diff = d.getDay() === 6 ? 0 : (6 - d.getDay());
   d.setDate(d.getDate() + diff);
   return d.toISOString().split('T')[0];
 }
-
+ 
 function getDisplayDate() {
   const d = new Date(weekDate + 'T12:00:00');
   return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
 }
-
+ 
 function checkDeadline() {
   const now = new Date();
   isLocked = now.getDay() === 6 && (now.getHours() > 14 || (now.getHours() === 14 && now.getMinutes() >= 55));
@@ -144,7 +144,7 @@ function checkDeadline() {
   badge.textContent = isLocked ? 'Picks Locked' : 'Picks Open';
   badge.className = 'badge ' + (isLocked ? 'badge-locked' : 'badge-open');
 }
-
+ 
 async function fetchFixtures() {
   try {
     const res = await fetch(
@@ -174,7 +174,7 @@ async function fetchFixtures() {
     { id: 'f5', home: 'Bolton', away: 'Wrexham', league: 'League One' },
   ];
 }
-
+ 
 async function loadPicks() {
   const { data } = await sb.from('picks').select('*').eq('week_date', weekDate);
   allPicks = data || [];
@@ -183,7 +183,7 @@ async function loadPicks() {
     myPick = mine ? { fixtureId: mine.fixture_id, team: mine.team_picked } : null;
   }
 }
-
+ 
 async function submitPick(fixtureId, team) {
   const btn = document.getElementById('submit-btn');
   btn.disabled = true;
@@ -198,13 +198,13 @@ async function submitPick(fixtureId, team) {
   await loadPicks();
   renderAll();
 }
-
+ 
 function renderAll() {
   renderPicksOverview();
   renderFixtures();
   updateSubmitBtn();
 }
-
+ 
 function renderPicksOverview() {
   const c = document.getElementById('picks-overview');
   const rows = PLAYERS.map(p => {
@@ -214,7 +214,7 @@ function renderPicksOverview() {
   }).join('');
   c.innerHTML = `<div class="picks-overview"><div class="section-label">This week's picks</div><div class="picks-table">${rows}</div></div>`;
 }
-
+ 
 function renderFixtures() {
   const c = document.getElementById('main-content');
   if (!currentPlayer) {
@@ -255,7 +255,7 @@ function renderFixtures() {
   }).join('');
   c.innerHTML = html;
 }
-
+ 
 function handleClick(event, fixtureId, home, away) {
   if (!currentPlayer || isLocked || myPick) return;
   const rect = event.currentTarget.getBoundingClientRect();
@@ -264,14 +264,14 @@ function handleClick(event, fixtureId, home, away) {
   renderFixtures();
   updateSubmitBtn();
 }
-
+ 
 function changePick() {
   myPick = null;
   pendingPick = null;
   renderFixtures();
   updateSubmitBtn();
 }
-
+ 
 function updateSubmitBtn() {
   const btn = document.getElementById('submit-btn');
   btn.className = 'submit-btn';
@@ -284,7 +284,7 @@ function updateSubmitBtn() {
   btn.textContent = `Lock in ${pendingPick.team}`;
   btn.onclick = () => submitPick(pendingPick.fixtureId, pendingPick.team);
 }
-
+ 
 function initChips() {
   const el = document.getElementById('player-chips');
   PLAYERS.forEach(p => {
@@ -302,7 +302,7 @@ function initChips() {
     el.appendChild(c);
   });
 }
-
+ 
 async function init() {
   document.getElementById('date-sub').textContent = 'Saturday 3pm kick-offs · ' + getDisplayDate();
   checkDeadline();
@@ -312,8 +312,9 @@ async function init() {
   renderAll();
   setInterval(async () => { checkDeadline(); await loadPicks(); renderAll(); }, 30000);
 }
-
+ 
 init();
 </script>
 </body>
 </html>
+ 
